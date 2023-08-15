@@ -79,6 +79,7 @@
             this.BtnEtutOlustur.TabIndex = 8;
             this.BtnEtutOlustur.Text = "Etüt Oluştur";
             this.BtnEtutOlustur.UseVisualStyleBackColor = true;
+            this.BtnEtutOlustur.Click += new System.EventHandler(this.BtnEtutOlustur_Click);
             // 
             // MskSaat
             // 
