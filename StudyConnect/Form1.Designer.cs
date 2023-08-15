@@ -39,8 +39,8 @@
             this.CmbDers = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.LblSoyad = new System.Windows.Forms.Label();
-            this.LblAd = new System.Windows.Forms.Label();
+            this.LblOgrenci = new System.Windows.Forms.Label();
+            this.LblOgretmen = new System.Windows.Forms.Label();
             this.BtnEtutDetay = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -154,8 +154,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.LblSoyad);
-            this.groupBox2.Controls.Add(this.LblAd);
+            this.groupBox2.Controls.Add(this.LblOgrenci);
+            this.groupBox2.Controls.Add(this.LblOgretmen);
             this.groupBox2.Controls.Add(this.BtnEtutDetay);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.label7);
@@ -167,23 +167,23 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // LblSoyad
+            // LblOgrenci
             // 
-            this.LblSoyad.AutoSize = true;
-            this.LblSoyad.Location = new System.Drawing.Point(140, 83);
-            this.LblSoyad.Name = "LblSoyad";
-            this.LblSoyad.Size = new System.Drawing.Size(49, 24);
-            this.LblSoyad.TabIndex = 11;
-            this.LblSoyad.Text = "Null";
+            this.LblOgrenci.AutoSize = true;
+            this.LblOgrenci.Location = new System.Drawing.Point(140, 83);
+            this.LblOgrenci.Name = "LblOgrenci";
+            this.LblOgrenci.Size = new System.Drawing.Size(49, 24);
+            this.LblOgrenci.TabIndex = 11;
+            this.LblOgrenci.Text = "Null";
             // 
-            // LblAd
+            // LblOgretmen
             // 
-            this.LblAd.AutoSize = true;
-            this.LblAd.Location = new System.Drawing.Point(140, 40);
-            this.LblAd.Name = "LblAd";
-            this.LblAd.Size = new System.Drawing.Size(49, 24);
-            this.LblAd.TabIndex = 10;
-            this.LblAd.Text = "Null";
+            this.LblOgretmen.AutoSize = true;
+            this.LblOgretmen.Location = new System.Drawing.Point(140, 40);
+            this.LblOgretmen.Name = "LblOgretmen";
+            this.LblOgretmen.Size = new System.Drawing.Size(49, 24);
+            this.LblOgretmen.TabIndex = 10;
+            this.LblOgretmen.Text = "Null";
             // 
             // BtnEtutDetay
             // 
@@ -218,18 +218,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(56, 83);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 24);
+            this.label6.Size = new System.Drawing.Size(86, 24);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Soyad:";
+            this.label6.Text = "Öğrenci:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 40);
+            this.label5.Location = new System.Drawing.Point(36, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 24);
+            this.label5.Size = new System.Drawing.Size(106, 24);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Ad:";
+            this.label5.Text = "Öğretmen:";
             // 
             // groupBox3
             // 
@@ -242,6 +242,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 26);
@@ -291,8 +292,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label LblSoyad;
-        private System.Windows.Forms.Label LblAd;
+        private System.Windows.Forms.Label LblOgrenci;
+        private System.Windows.Forms.Label LblOgretmen;
         private System.Windows.Forms.Button BtnEtutDetay;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label7;

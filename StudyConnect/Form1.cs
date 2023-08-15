@@ -30,10 +30,20 @@ namespace StudyConnect
             CmbDers.DataSource = dt;
         }
 
+        void etutListesi()
+        {
+            SqlDataAdapter da2 = new SqlDataAdapter("execute Etut", baglanti);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            dataGridView1.DataSource = dt2;
+        }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             dersListesi();
+            etutListesi();
         }
 
         private void CmbDers_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,6 +67,7 @@ namespace StudyConnect
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Etüt oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            etutListesi();
         }
     }
 }
