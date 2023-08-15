@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.CmbDers = new System.Windows.Forms.ComboBox();
-            this.MskTarih = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CmbOgretmen = new System.Windows.Forms.ComboBox();
-            this.MskSaat = new System.Windows.Forms.MaskedTextBox();
             this.BtnEtutOlustur = new System.Windows.Forms.Button();
+            this.MskSaat = new System.Windows.Forms.MaskedTextBox();
+            this.CmbOgretmen = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MskTarih = new System.Windows.Forms.MaskedTextBox();
+            this.CmbDers = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.BtnEtutDetay = new System.Windows.Forms.Button();
-            this.LblAd = new System.Windows.Forms.Label();
             this.LblSoyad = new System.Windows.Forms.Label();
+            this.LblAd = new System.Windows.Forms.Label();
+            this.BtnEtutDetay = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -71,66 +71,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // BtnEtutOlustur
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ders:";
-            // 
-            // CmbDers
-            // 
-            this.CmbDers.FormattingEnabled = true;
-            this.CmbDers.Location = new System.Drawing.Point(132, 17);
-            this.CmbDers.Name = "CmbDers";
-            this.CmbDers.Size = new System.Drawing.Size(231, 32);
-            this.CmbDers.TabIndex = 1;
-            // 
-            // MskTarih
-            // 
-            this.MskTarih.Location = new System.Drawing.Point(132, 127);
-            this.MskTarih.Mask = "00/00/0000";
-            this.MskTarih.Name = "MskTarih";
-            this.MskTarih.Size = new System.Drawing.Size(231, 30);
-            this.MskTarih.TabIndex = 2;
-            this.MskTarih.ValidatingType = typeof(System.DateTime);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Öğretmen:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tarih:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Saat:";
-            // 
-            // CmbOgretmen
-            // 
-            this.CmbOgretmen.FormattingEnabled = true;
-            this.CmbOgretmen.Location = new System.Drawing.Point(132, 72);
-            this.CmbOgretmen.Name = "CmbOgretmen";
-            this.CmbOgretmen.Size = new System.Drawing.Size(231, 32);
-            this.CmbOgretmen.TabIndex = 6;
+            this.BtnEtutOlustur.Location = new System.Drawing.Point(132, 216);
+            this.BtnEtutOlustur.Name = "BtnEtutOlustur";
+            this.BtnEtutOlustur.Size = new System.Drawing.Size(231, 44);
+            this.BtnEtutOlustur.TabIndex = 8;
+            this.BtnEtutOlustur.Text = "Etüt Oluştur";
+            this.BtnEtutOlustur.UseVisualStyleBackColor = true;
             // 
             // MskSaat
             // 
@@ -141,14 +89,67 @@
             this.MskSaat.TabIndex = 7;
             this.MskSaat.ValidatingType = typeof(System.DateTime);
             // 
-            // BtnEtutOlustur
+            // CmbOgretmen
             // 
-            this.BtnEtutOlustur.Location = new System.Drawing.Point(132, 216);
-            this.BtnEtutOlustur.Name = "BtnEtutOlustur";
-            this.BtnEtutOlustur.Size = new System.Drawing.Size(231, 44);
-            this.BtnEtutOlustur.TabIndex = 8;
-            this.BtnEtutOlustur.Text = "Etüt Oluştur";
-            this.BtnEtutOlustur.UseVisualStyleBackColor = true;
+            this.CmbOgretmen.FormattingEnabled = true;
+            this.CmbOgretmen.Location = new System.Drawing.Point(132, 72);
+            this.CmbOgretmen.Name = "CmbOgretmen";
+            this.CmbOgretmen.Size = new System.Drawing.Size(231, 32);
+            this.CmbOgretmen.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(74, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Saat:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tarih:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Öğretmen:";
+            // 
+            // MskTarih
+            // 
+            this.MskTarih.Location = new System.Drawing.Point(132, 127);
+            this.MskTarih.Mask = "00/00/0000";
+            this.MskTarih.Name = "MskTarih";
+            this.MskTarih.Size = new System.Drawing.Size(231, 30);
+            this.MskTarih.TabIndex = 2;
+            this.MskTarih.ValidatingType = typeof(System.DateTime);
+            // 
+            // CmbDers
+            // 
+            this.CmbDers.FormattingEnabled = true;
+            this.CmbDers.Location = new System.Drawing.Point(132, 17);
+            this.CmbDers.Name = "CmbDers";
+            this.CmbDers.Size = new System.Drawing.Size(231, 32);
+            this.CmbDers.TabIndex = 1;
+            this.CmbDers.SelectedIndexChanged += new System.EventHandler(this.CmbDers_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ders:";
             // 
             // groupBox2
             // 
@@ -165,32 +166,32 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // label5
+            // LblSoyad
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Ad:";
+            this.LblSoyad.AutoSize = true;
+            this.LblSoyad.Location = new System.Drawing.Point(140, 83);
+            this.LblSoyad.Name = "LblSoyad";
+            this.LblSoyad.Size = new System.Drawing.Size(49, 24);
+            this.LblSoyad.TabIndex = 11;
+            this.LblSoyad.Text = "Null";
             // 
-            // label6
+            // LblAd
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 24);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Soyad:";
+            this.LblAd.AutoSize = true;
+            this.LblAd.Location = new System.Drawing.Point(140, 40);
+            this.LblAd.Name = "LblAd";
+            this.LblAd.Size = new System.Drawing.Size(49, 24);
+            this.LblAd.TabIndex = 10;
+            this.LblAd.Text = "Null";
             // 
-            // label7
+            // BtnEtutDetay
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 24);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Durum:";
+            this.BtnEtutDetay.Location = new System.Drawing.Point(252, 106);
+            this.BtnEtutDetay.Name = "BtnEtutDetay";
+            this.BtnEtutDetay.Size = new System.Drawing.Size(178, 44);
+            this.BtnEtutDetay.TabIndex = 9;
+            this.BtnEtutDetay.Text = "Etüt Detay";
+            this.BtnEtutDetay.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -202,32 +203,32 @@
             this.checkBox1.Text = "İptal";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // BtnEtutDetay
+            // label7
             // 
-            this.BtnEtutDetay.Location = new System.Drawing.Point(252, 106);
-            this.BtnEtutDetay.Name = "BtnEtutDetay";
-            this.BtnEtutDetay.Size = new System.Drawing.Size(178, 44);
-            this.BtnEtutDetay.TabIndex = 9;
-            this.BtnEtutDetay.Text = "Etüt Detay";
-            this.BtnEtutDetay.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(44, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 24);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Durum:";
             // 
-            // LblAd
+            // label6
             // 
-            this.LblAd.AutoSize = true;
-            this.LblAd.Location = new System.Drawing.Point(140, 40);
-            this.LblAd.Name = "LblAd";
-            this.LblAd.Size = new System.Drawing.Size(49, 24);
-            this.LblAd.TabIndex = 10;
-            this.LblAd.Text = "Null";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 24);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Soyad:";
             // 
-            // LblSoyad
+            // label5
             // 
-            this.LblSoyad.AutoSize = true;
-            this.LblSoyad.Location = new System.Drawing.Point(140, 83);
-            this.LblSoyad.Name = "LblSoyad";
-            this.LblSoyad.Size = new System.Drawing.Size(49, 24);
-            this.LblSoyad.TabIndex = 11;
-            this.LblSoyad.Text = "Null";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(85, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ad:";
             // 
             // groupBox3
             // 
@@ -259,10 +260,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
