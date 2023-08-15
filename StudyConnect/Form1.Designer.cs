@@ -39,15 +39,13 @@
             this.CmbDers = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.LblOgrenci = new System.Windows.Forms.Label();
-            this.LblOgretmen = new System.Windows.Forms.Label();
-            this.BtnEtutDetay = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.BtnEtutVer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TxtOgrencıID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtEtutID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -154,82 +152,35 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.LblOgrenci);
-            this.groupBox2.Controls.Add(this.LblOgretmen);
-            this.groupBox2.Controls.Add(this.BtnEtutDetay);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.TxtEtutID);
             this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.TxtOgrencıID);
+            this.groupBox2.Controls.Add(this.BtnEtutVer);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(610, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(593, 329);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // LblOgrenci
+            // BtnEtutVer
             // 
-            this.LblOgrenci.AutoSize = true;
-            this.LblOgrenci.Location = new System.Drawing.Point(140, 83);
-            this.LblOgrenci.Name = "LblOgrenci";
-            this.LblOgrenci.Size = new System.Drawing.Size(49, 24);
-            this.LblOgrenci.TabIndex = 11;
-            this.LblOgrenci.Text = "Null";
-            // 
-            // LblOgretmen
-            // 
-            this.LblOgretmen.AutoSize = true;
-            this.LblOgretmen.Location = new System.Drawing.Point(140, 40);
-            this.LblOgretmen.Name = "LblOgretmen";
-            this.LblOgretmen.Size = new System.Drawing.Size(49, 24);
-            this.LblOgretmen.TabIndex = 10;
-            this.LblOgretmen.Text = "Null";
-            // 
-            // BtnEtutDetay
-            // 
-            this.BtnEtutDetay.Location = new System.Drawing.Point(252, 106);
-            this.BtnEtutDetay.Name = "BtnEtutDetay";
-            this.BtnEtutDetay.Size = new System.Drawing.Size(178, 44);
-            this.BtnEtutDetay.TabIndex = 9;
-            this.BtnEtutDetay.Text = "Etüt Detay";
-            this.BtnEtutDetay.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(144, 125);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 28);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "İptal";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 24);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Durum:";
+            this.BtnEtutVer.Location = new System.Drawing.Point(125, 145);
+            this.BtnEtutVer.Name = "BtnEtutVer";
+            this.BtnEtutVer.Size = new System.Drawing.Size(178, 44);
+            this.BtnEtutVer.TabIndex = 9;
+            this.BtnEtutVer.Text = "Etüt Ver";
+            this.BtnEtutVer.UseVisualStyleBackColor = true;
+            this.BtnEtutVer.Click += new System.EventHandler(this.BtnEtutVer_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 83);
+            this.label6.Location = new System.Drawing.Point(33, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 24);
             this.label6.TabIndex = 1;
             this.label6.Text = "Öğrenci:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Öğretmen:";
             // 
             // groupBox3
             // 
@@ -251,6 +202,30 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1185, 259);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // TxtOgrencıID
+            // 
+            this.TxtOgrencıID.Location = new System.Drawing.Point(125, 97);
+            this.TxtOgrencıID.Name = "TxtOgrencıID";
+            this.TxtOgrencıID.Size = new System.Drawing.Size(178, 30);
+            this.TxtOgrencıID.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 24);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Etüt ID:";
+            // 
+            // TxtEtutID
+            // 
+            this.TxtEtutID.Location = new System.Drawing.Point(125, 49);
+            this.TxtEtutID.Name = "TxtEtutID";
+            this.TxtEtutID.Size = new System.Drawing.Size(178, 30);
+            this.TxtEtutID.TabIndex = 14;
             // 
             // Form1
             // 
@@ -291,14 +266,12 @@
         private System.Windows.Forms.Button BtnEtutOlustur;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label LblOgrenci;
-        private System.Windows.Forms.Label LblOgretmen;
-        private System.Windows.Forms.Button BtnEtutDetay;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnEtutVer;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox TxtOgrencıID;
+        private System.Windows.Forms.TextBox TxtEtutID;
+        private System.Windows.Forms.Label label5;
     }
 }
 

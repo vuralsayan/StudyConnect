@@ -69,5 +69,24 @@ namespace StudyConnect
             MessageBox.Show("Etüt oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             etutListesi();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            TxtEtutID.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+        }
+
+        private void BtnEtutVer_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("UPDATE TBLETUT SET OGRENCIID=@P1,DURUM=@P2 WHERE ID=@P3", baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtOgrencıID.Text);    
+            komut.Parameters.AddWithValue("@P2", "True");
+            komut.Parameters.AddWithValue("@P3", TxtEtutID.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Etüt verildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            etutListesi();
+        }
     }
 }
