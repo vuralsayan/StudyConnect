@@ -95,5 +95,21 @@ namespace StudyConnect
             openFileDialog1.ShowDialog();                           //Dosya seçme işlemi
             pictureBox1.ImageLocation = openFileDialog1.FileName;   //Seçilen dosyanın resmini gösterme
         }
+
+        private void BtnOgrenciEkle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLOGRENCI (AD,SOYAD,FOTOGRAF,SINIF,TELEFON,MAIL) VALUES(@p1,@p2,@p3,@p4,@p5,@p6)", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
+            komut.Parameters.AddWithValue("@p3", pictureBox1.ImageLocation);
+            komut.Parameters.AddWithValue("@p4", TxtSinif.Text);
+            komut.Parameters.AddWithValue("@p5", MskTelefon.Text);
+            komut.Parameters.AddWithValue("@p6", TxtMail.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Öğrenci eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            etutListesi();
+        }
     }
 }

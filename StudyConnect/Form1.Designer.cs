@@ -396,10 +396,12 @@
             this.BtnOgrenciEkle.TabIndex = 24;
             this.BtnOgrenciEkle.Text = "Öğrenci Ekle";
             this.BtnOgrenciEkle.UseVisualStyleBackColor = true;
+            this.BtnOgrenciEkle.Click += new System.EventHandler(this.BtnOgrenciEkle_Click);
             // 
             // MskTelefon
             // 
             this.MskTelefon.Location = new System.Drawing.Point(120, 160);
+            this.MskTelefon.Mask = "(999) 000-0000";
             this.MskTelefon.Name = "MskTelefon";
             this.MskTelefon.Size = new System.Drawing.Size(178, 30);
             this.MskTelefon.TabIndex = 25;
