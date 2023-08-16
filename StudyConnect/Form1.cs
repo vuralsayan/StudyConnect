@@ -39,7 +39,28 @@ namespace StudyConnect
             dataGridView1.DataSource = dt2;
         }
 
+        bool IsDersUsed(string dersAd, SqlConnection baglanti)
+        {
+            using (SqlCommand komut = new SqlCommand("SELECT COUNT(*) FROM TBLDERSLER WHERE DERSAD=@P1", baglanti))
+            {
+                baglanti.Open();
+                komut.Parameters.AddWithValue("@P1", dersAd);
+                int count = (int)komut.ExecuteScalar();
+                baglanti.Close();
+                return count > 0;      //Eğer dersAd varsa true döndürür
+            }
+        }
 
+        void InsertDers(string dersAd, SqlConnection baglanti)
+        {
+            using (SqlCommand komut = new SqlCommand("INSERT INTO TBLDERSLER (DERSAD) VALUES(@P1)", baglanti))
+            {
+                baglanti.Open();
+                komut.Parameters.AddWithValue("@P1", dersAd);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -81,7 +102,7 @@ namespace StudyConnect
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("UPDATE TBLETUT SET OGRENCIID=@P1,DURUM=@P2 WHERE ID=@P3", baglanti);
-            komut.Parameters.AddWithValue("@P1", TxtOgrencıID.Text);    
+            komut.Parameters.AddWithValue("@P1", TxtOgrencıID.Text);
             komut.Parameters.AddWithValue("@P2", "True");
             komut.Parameters.AddWithValue("@P3", TxtEtutID.Text);
             komut.ExecuteNonQuery();
@@ -109,7 +130,26 @@ namespace StudyConnect
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Öğrenci eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            etutListesi();
+        }
+
+        private void BtnDersEkle_Click(object sender, EventArgs e)
+        {
+            string dersAd;
+            do
+            {
+                dersAd = TxtDers.Text;
+                if (IsDersUsed(dersAd, baglanti))
+                {
+                    MessageBox.Show("Bu Ders Adı Sistemde Zaten Mevcut!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    InsertDers(dersAd, baglanti);
+                    MessageBox.Show("Ders Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;  //Ders eklendikten sonra döngüden çık
+                }
+            } while (false);
         }
     }
 }
+

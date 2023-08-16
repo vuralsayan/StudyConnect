@@ -47,32 +47,32 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtAd = new System.Windows.Forms.TextBox();
-            this.TxtSoyad = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtSinif = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TxtMail = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.BtnOgrenciEkle = new System.Windows.Forms.Button();
-            this.MskTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.BtnDersEkle = new System.Windows.Forms.Button();
             this.TxtDers = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.MskTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.BtnOgrenciEkle = new System.Windows.Forms.Button();
+            this.TxtMail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtSinif = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TxtSoyad = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtAd = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.BtnFotograf = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.BtnOgretmenKaydet = new System.Windows.Forms.Button();
+            this.CmbDersAdı = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.TxtOgretmenSoyAd = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.TxtOgretmenAd = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.CmbDersAdı = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.BtnOgretmenKaydet = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -81,8 +81,8 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -262,7 +262,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.BtnDersEkle);
             this.groupBox4.Controls.Add(this.TxtDers);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Location = new System.Drawing.Point(442, 180);
@@ -270,6 +270,32 @@
             this.groupBox4.Size = new System.Drawing.Size(321, 149);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
+            // 
+            // BtnDersEkle
+            // 
+            this.BtnDersEkle.Location = new System.Drawing.Point(101, 73);
+            this.BtnDersEkle.Name = "BtnDersEkle";
+            this.BtnDersEkle.Size = new System.Drawing.Size(178, 44);
+            this.BtnDersEkle.TabIndex = 26;
+            this.BtnDersEkle.Text = "Ders Ekle";
+            this.BtnDersEkle.UseVisualStyleBackColor = true;
+            this.BtnDersEkle.Click += new System.EventHandler(this.BtnDersEkle_Click);
+            // 
+            // TxtDers
+            // 
+            this.TxtDers.Location = new System.Drawing.Point(101, 29);
+            this.TxtDers.Name = "TxtDers";
+            this.TxtDers.Size = new System.Drawing.Size(178, 30);
+            this.TxtDers.TabIndex = 16;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(9, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 24);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Ders Adı:";
             // 
             // groupBox5
             // 
@@ -290,87 +316,23 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             // 
-            // groupBox6
+            // MskTelefon
             // 
-            this.groupBox6.Controls.Add(this.BtnFotograf);
-            this.groupBox6.Controls.Add(this.pictureBox1);
-            this.groupBox6.Location = new System.Drawing.Point(1114, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(294, 329);
-            this.groupBox6.TabIndex = 4;
-            this.groupBox6.TabStop = false;
+            this.MskTelefon.Location = new System.Drawing.Point(120, 160);
+            this.MskTelefon.Mask = "(999) 000-0000";
+            this.MskTelefon.Name = "MskTelefon";
+            this.MskTelefon.Size = new System.Drawing.Size(178, 30);
+            this.MskTelefon.TabIndex = 25;
             // 
-            // groupBox7
+            // BtnOgrenciEkle
             // 
-            this.groupBox7.Controls.Add(this.BtnOgretmenKaydet);
-            this.groupBox7.Controls.Add(this.CmbDersAdı);
-            this.groupBox7.Controls.Add(this.label15);
-            this.groupBox7.Controls.Add(this.TxtOgretmenSoyAd);
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Controls.Add(this.TxtOgretmenAd);
-            this.groupBox7.Controls.Add(this.label14);
-            this.groupBox7.Location = new System.Drawing.Point(1114, 335);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(294, 283);
-            this.groupBox7.TabIndex = 5;
-            this.groupBox7.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(68, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 24);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Ad:";
-            // 
-            // TxtAd
-            // 
-            this.TxtAd.Location = new System.Drawing.Point(120, 22);
-            this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(178, 30);
-            this.TxtAd.TabIndex = 15;
-            // 
-            // TxtSoyad
-            // 
-            this.TxtSoyad.Location = new System.Drawing.Point(120, 68);
-            this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(178, 30);
-            this.TxtSoyad.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 71);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 24);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Soyad:";
-            // 
-            // TxtSinif
-            // 
-            this.TxtSinif.Location = new System.Drawing.Point(120, 114);
-            this.TxtSinif.Name = "TxtSinif";
-            this.TxtSinif.Size = new System.Drawing.Size(178, 30);
-            this.TxtSinif.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(51, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 24);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Sınıf:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 163);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 24);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Telefon:";
+            this.BtnOgrenciEkle.Location = new System.Drawing.Point(120, 253);
+            this.BtnOgrenciEkle.Name = "BtnOgrenciEkle";
+            this.BtnOgrenciEkle.Size = new System.Drawing.Size(178, 44);
+            this.BtnOgrenciEkle.TabIndex = 24;
+            this.BtnOgrenciEkle.Text = "Öğrenci Ekle";
+            this.BtnOgrenciEkle.UseVisualStyleBackColor = true;
+            this.BtnOgrenciEkle.Click += new System.EventHandler(this.BtnOgrenciEkle_Click);
             // 
             // TxtMail
             // 
@@ -388,57 +350,72 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "Mail:";
             // 
-            // BtnOgrenciEkle
+            // label10
             // 
-            this.BtnOgrenciEkle.Location = new System.Drawing.Point(120, 253);
-            this.BtnOgrenciEkle.Name = "BtnOgrenciEkle";
-            this.BtnOgrenciEkle.Size = new System.Drawing.Size(178, 44);
-            this.BtnOgrenciEkle.TabIndex = 24;
-            this.BtnOgrenciEkle.Text = "Öğrenci Ekle";
-            this.BtnOgrenciEkle.UseVisualStyleBackColor = true;
-            this.BtnOgrenciEkle.Click += new System.EventHandler(this.BtnOgrenciEkle_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(30, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 24);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Telefon:";
             // 
-            // MskTelefon
+            // TxtSinif
             // 
-            this.MskTelefon.Location = new System.Drawing.Point(120, 160);
-            this.MskTelefon.Mask = "(999) 000-0000";
-            this.MskTelefon.Name = "MskTelefon";
-            this.MskTelefon.Size = new System.Drawing.Size(178, 30);
-            this.MskTelefon.TabIndex = 25;
+            this.TxtSinif.Location = new System.Drawing.Point(120, 114);
+            this.TxtSinif.Name = "TxtSinif";
+            this.TxtSinif.Size = new System.Drawing.Size(178, 30);
+            this.TxtSinif.TabIndex = 18;
             // 
-            // TxtDers
+            // label9
             // 
-            this.TxtDers.Location = new System.Drawing.Point(101, 29);
-            this.TxtDers.Name = "TxtDers";
-            this.TxtDers.Size = new System.Drawing.Size(178, 30);
-            this.TxtDers.TabIndex = 16;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(51, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 24);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Sınıf:";
             // 
-            // label12
+            // TxtSoyad
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 24);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Ders Adı:";
+            this.TxtSoyad.Location = new System.Drawing.Point(120, 68);
+            this.TxtSoyad.Name = "TxtSoyad";
+            this.TxtSoyad.Size = new System.Drawing.Size(178, 30);
+            this.TxtSoyad.TabIndex = 16;
             // 
-            // button1
+            // label8
             // 
-            this.button1.Location = new System.Drawing.Point(101, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 44);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Ders Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(45, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 24);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Soyad:";
             // 
-            // pictureBox1
+            // TxtAd
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 211);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.TxtAd.Location = new System.Drawing.Point(120, 22);
+            this.TxtAd.Name = "TxtAd";
+            this.TxtAd.Size = new System.Drawing.Size(178, 30);
+            this.TxtAd.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(68, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 24);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Ad:";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.BtnFotograf);
+            this.groupBox6.Controls.Add(this.pictureBox1);
+            this.groupBox6.Location = new System.Drawing.Point(1114, 0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(294, 329);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
             // 
             // BtnFotograf
             // 
@@ -449,6 +426,56 @@
             this.BtnFotograf.Text = "Fotoğraf Yükle";
             this.BtnFotograf.UseVisualStyleBackColor = true;
             this.BtnFotograf.Click += new System.EventHandler(this.BtnFotograf_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(6, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(282, 211);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.BtnOgretmenKaydet);
+            this.groupBox7.Controls.Add(this.CmbDersAdı);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.TxtOgretmenSoyAd);
+            this.groupBox7.Controls.Add(this.label13);
+            this.groupBox7.Controls.Add(this.TxtOgretmenAd);
+            this.groupBox7.Controls.Add(this.label14);
+            this.groupBox7.Location = new System.Drawing.Point(1114, 335);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(294, 283);
+            this.groupBox7.TabIndex = 5;
+            this.groupBox7.TabStop = false;
+            // 
+            // BtnOgretmenKaydet
+            // 
+            this.BtnOgretmenKaydet.Location = new System.Drawing.Point(79, 170);
+            this.BtnOgretmenKaydet.Name = "BtnOgretmenKaydet";
+            this.BtnOgretmenKaydet.Size = new System.Drawing.Size(197, 44);
+            this.BtnOgretmenKaydet.TabIndex = 27;
+            this.BtnOgretmenKaydet.Text = "Öğretmen Ekle";
+            this.BtnOgretmenKaydet.UseVisualStyleBackColor = true;
+            // 
+            // CmbDersAdı
+            // 
+            this.CmbDersAdı.FormattingEnabled = true;
+            this.CmbDersAdı.Location = new System.Drawing.Point(79, 122);
+            this.CmbDersAdı.Name = "CmbDersAdı";
+            this.CmbDersAdı.Size = new System.Drawing.Size(197, 32);
+            this.CmbDersAdı.TabIndex = 23;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(21, 130);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 24);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Ders:";
             // 
             // TxtOgretmenSoyAd
             // 
@@ -481,32 +508,6 @@
             this.label14.Size = new System.Drawing.Size(40, 24);
             this.label14.TabIndex = 19;
             this.label14.Text = "Ad:";
-            // 
-            // CmbDersAdı
-            // 
-            this.CmbDersAdı.FormattingEnabled = true;
-            this.CmbDersAdı.Location = new System.Drawing.Point(79, 122);
-            this.CmbDersAdı.Name = "CmbDersAdı";
-            this.CmbDersAdı.Size = new System.Drawing.Size(197, 32);
-            this.CmbDersAdı.TabIndex = 23;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 130);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 24);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "Ders:";
-            // 
-            // BtnOgretmenKaydet
-            // 
-            this.BtnOgretmenKaydet.Location = new System.Drawing.Point(79, 170);
-            this.BtnOgretmenKaydet.Name = "BtnOgretmenKaydet";
-            this.BtnOgretmenKaydet.Size = new System.Drawing.Size(197, 44);
-            this.BtnOgretmenKaydet.TabIndex = 27;
-            this.BtnOgretmenKaydet.Text = "Öğretmen Ekle";
-            this.BtnOgretmenKaydet.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -542,9 +543,9 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -584,7 +585,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnOgrenciEkle;
         private System.Windows.Forms.MaskedTextBox MskTelefon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnDersEkle;
         private System.Windows.Forms.TextBox TxtDers;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button BtnFotograf;
