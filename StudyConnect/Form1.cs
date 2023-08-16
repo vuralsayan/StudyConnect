@@ -31,6 +31,17 @@ namespace StudyConnect
             CmbDers.DataSource = dt;
         }
 
+        void dersListesi2()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TBLDERSLER", baglanti);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbDersAdı.ValueMember = "DERSID";
+            CmbDersAdı.DisplayMember = "DERSAD";
+            CmbDersAdı.DataSource = dt;
+        }
+
+
         void etutListesi()
         {
             SqlDataAdapter da2 = new SqlDataAdapter("execute Etut", baglanti);
@@ -65,7 +76,10 @@ namespace StudyConnect
         private void Form1_Load(object sender, EventArgs e)
         {
             dersListesi();
+            dersListesi2();
             etutListesi();
+            CmbDers.Text = "Ders Seçiniz";
+            CmbDersAdı.Text = "Ders Seçiniz";
         }
 
         private void CmbDers_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,6 +163,20 @@ namespace StudyConnect
                     break;  //Ders eklendikten sonra döngüden çık
                 }
             } while (false);
+
+            dersListesi(); //Dersler listesini güncelle
+        }
+
+        private void BtnOgretmenEkle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLOGRETMEN (AD,SOYAD,BRANSID) VALUES(@p1,@p2,@p3)", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtOgretmenAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtOgretmenSoyAd.Text);
+            komut.Parameters.AddWithValue("@p3", CmbDersAdı.SelectedValue);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Öğretmen eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

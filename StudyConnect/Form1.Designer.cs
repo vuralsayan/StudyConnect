@@ -66,7 +66,7 @@
             this.BtnFotograf = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.BtnOgretmenKaydet = new System.Windows.Forms.Button();
+            this.BtnOgretmenEkle = new System.Windows.Forms.Button();
             this.CmbDersAdı = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.TxtOgretmenSoyAd = new System.Windows.Forms.TextBox();
@@ -438,7 +438,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.BtnOgretmenKaydet);
+            this.groupBox7.Controls.Add(this.BtnOgretmenEkle);
             this.groupBox7.Controls.Add(this.CmbDersAdı);
             this.groupBox7.Controls.Add(this.label15);
             this.groupBox7.Controls.Add(this.TxtOgretmenSoyAd);
@@ -451,14 +451,15 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             // 
-            // BtnOgretmenKaydet
+            // BtnOgretmenEkle
             // 
-            this.BtnOgretmenKaydet.Location = new System.Drawing.Point(79, 170);
-            this.BtnOgretmenKaydet.Name = "BtnOgretmenKaydet";
-            this.BtnOgretmenKaydet.Size = new System.Drawing.Size(197, 44);
-            this.BtnOgretmenKaydet.TabIndex = 27;
-            this.BtnOgretmenKaydet.Text = "Öğretmen Ekle";
-            this.BtnOgretmenKaydet.UseVisualStyleBackColor = true;
+            this.BtnOgretmenEkle.Location = new System.Drawing.Point(79, 170);
+            this.BtnOgretmenEkle.Name = "BtnOgretmenEkle";
+            this.BtnOgretmenEkle.Size = new System.Drawing.Size(197, 44);
+            this.BtnOgretmenEkle.TabIndex = 27;
+            this.BtnOgretmenEkle.Text = "Öğretmen Ekle";
+            this.BtnOgretmenEkle.UseVisualStyleBackColor = true;
+            this.BtnOgretmenEkle.Click += new System.EventHandler(this.BtnOgretmenEkle_Click);
             // 
             // CmbDersAdı
             // 
@@ -596,7 +597,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TxtOgretmenAd;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button BtnOgretmenKaydet;
+        private System.Windows.Forms.Button BtnOgretmenEkle;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
