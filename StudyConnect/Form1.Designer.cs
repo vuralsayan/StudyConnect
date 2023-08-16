@@ -73,6 +73,7 @@
             this.CmbDersAdı = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.BtnOgretmenKaydet = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -445,6 +446,7 @@
             this.BtnFotograf.TabIndex = 26;
             this.BtnFotograf.Text = "Fotoğraf Yükle";
             this.BtnFotograf.UseVisualStyleBackColor = true;
+            this.BtnFotograf.Click += new System.EventHandler(this.BtnFotograf_Click);
             // 
             // TxtOgretmenSoyAd
             // 
@@ -503,6 +505,10 @@
             this.BtnOgretmenKaydet.TabIndex = 27;
             this.BtnOgretmenKaydet.Text = "Öğretmen Ekle";
             this.BtnOgretmenKaydet.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -588,6 +594,7 @@
         private System.Windows.Forms.TextBox TxtOgretmenAd;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button BtnOgretmenKaydet;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace StudyConnect
 {
@@ -87,6 +88,12 @@ namespace StudyConnect
             baglanti.Close();
             MessageBox.Show("Etüt verildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             etutListesi();
+        }
+
+        private void BtnFotograf_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();                           //Dosya seçme işlemi
+            pictureBox1.ImageLocation = openFileDialog1.FileName;   //Seçilen dosyanın resmini gösterme
         }
     }
 }
